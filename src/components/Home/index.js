@@ -8,14 +8,11 @@ const Home = () => {
             <div className="text-zone">
                 <h1>
                     Welcome, <br />
-                    I'm Simen
+                    I'm Simen Klemp
                     <br />
-                        Computer Scientist and Developer
+                    <h2>Computer Scientist and Developer</h2>
                 </h1>
-                <h2>
-                    Computer Science Student
-                </h2>
-                    <Link to="/contact" className="flat-button"> CONTACT ME </Link>
+                <Link to="/contact" className="flat-button"> CONTACT ME </Link>
             </div>
             <div className="picture">
                 <img className="solid-logo" src={homeLogo} />

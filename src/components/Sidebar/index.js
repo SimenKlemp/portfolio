@@ -9,7 +9,7 @@ const Sidebar = () => (
         <div className="contact-elements">
             <ul>
                 <li>
-                    <a target="_blank" rel='noreferrer' href='https://www.linkedin.com/in/simen-klemp-petersen-b684411ba/'>
+                    <a target="_blank" rel='noreferrer' href='https://www.linkedin.com/in/simen-klemp-b684411ba/'>
                         <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
 
                     </a>
