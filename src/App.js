@@ -7,7 +7,7 @@ import AboutMe from "./components/AboutMe";
 function App() {
   return (
       <>
-        <Routes basename={process.env.PUBLIC_URL}>
+        <Routes>
             <Route path="/" element={ <Layout />}>
                 <Route index element={ <Home />} />
 
