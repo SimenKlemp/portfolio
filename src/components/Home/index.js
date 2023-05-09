@@ -20,7 +20,6 @@ const Home = () => {
             <div className="picture">
                 <img className="solid-logo" src={homeLogo} />
             </div>
-
         </div>
     )
 }
