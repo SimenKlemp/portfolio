@@ -18,7 +18,6 @@ function App() {
             <Route path="/projects" element={ <Layout />}>
 
             </Route>
-
         </Routes>
       </>
 
