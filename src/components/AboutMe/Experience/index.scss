@@ -1,0 +1,70 @@
+.aboutMe-container {
+
+  h4 {
+    color: #fff;
+    font-size: 10px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    animation: fadeIn 1s 1.8s backwards;
+    font-weight: bold;
+  }
+
+  p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 10px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    animation: fadeIn 1s 1.8s backwards;
+
+  }
+
+  .experience-container{
+    position: absolute;
+    display: block;
+    transform: translateY(-50%);
+    width: 40%;
+    max-height: 90%;
+
+    .hr{
+      margin: auto 400px
+    }
+
+    .experience-content-title{
+      color: #fff;
+      font-size: 35px;
+      line-height: 53px;
+      margin-top: 200px;
+      font-family: 'Coolvetica';
+      letter-spacing: 4px;
+    }
+
+    .employment {
+      display: block;
+
+      .experience-content-container{
+        margin-top: 25px;
+        display: flex;
+
+        .experience-content-logo {
+          transform: translate(0, -50%);
+          margin-top: 50px;
+          .firmLogo{
+            width: 50px
+          }
+
+        }
+        .experience-content {
+          margin-left: 20px;
+
+        }
+      }
+
+    }
+  }
+
+}
+
+
+
+
