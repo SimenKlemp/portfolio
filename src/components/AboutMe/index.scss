@@ -1,7 +1,9 @@
 
 .about-page {
+  display: block;
   overflow-y: auto;
   left: 10%;
+
 
   .text-zone{
     position: absolute;
@@ -48,14 +50,27 @@
   }
 
   .experience-container {
-    left: 5%;
-    top: 60%;
+    margin-top: 20%;
+    margin-right: 20%;
+
+    .experience-title-container {
+      padding: 10px;
+      border-bottom: 3px solid rgba(255, 215, 0, 0.6);
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+    }
+
+    .experience-title {
+      color: #fff;
+      font-size: 25px;
+      line-height: 53px;
+      margin: 0;
+      font-family: 'Coolvetica';
+      font-weight: bold;
+      letter-spacing: 4px;
+    }
 
   }
-
-
-
-
 
 }
 

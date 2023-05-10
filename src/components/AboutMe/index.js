@@ -1,11 +1,10 @@
 
 import './index.scss'
-import Experience from "./Experience";
+import {experience} from "../../experience";
 import portret from '../../assets/images/portrett.jpg'
+import ExperienceCard from "./ExperienceCard";
 
 const AboutMe = () => {
-
-
     return (
         <div className="container about-page">
             <div className="text-zone">
@@ -20,17 +19,22 @@ const AboutMe = () => {
                 </div>
                 <div className="picture">
                     <img className="solid-logo" src={portret} />
-
                 </div>
             </div>
             <div className="experience-container">
-                <Experience/>
+                <div className={"experience-title-container"}>
+                    <h1 className="experience-title">Experience</h1>
+                </div>
+                {experience.map((data, key) => {
+                    return (
+                        <div key={key}>
+                            <ExperienceCard jobTitle={data.jobTitle} company={data.company} duration={data.duration} picture={data.picture}/>
+                        </div>
+                    );
+                })}
             </div>
         </div>
-
-
     )
-
 }
 
 export default AboutMe
