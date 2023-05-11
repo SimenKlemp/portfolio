@@ -1,6 +1,7 @@
 
 import './index.scss'
 import {experience} from "../../experience";
+import {education} from "../../education";
 import portret from '../../assets/images/portrett.jpg'
 import ExperienceCard from "./ExperienceCard";
 
@@ -25,13 +26,29 @@ const AboutMe = () => {
                 <div className={"experience-title-container"}>
                     <h1 className="experience-title">Experience</h1>
                 </div>
-                {experience.map((data, key) => {
-                    return (
-                        <div key={key}>
-                            <ExperienceCard jobTitle={data.jobTitle} company={data.company} duration={data.duration} picture={data.picture}/>
-                        </div>
-                    );
-                })}
+                <div>
+                    {experience.map((data, key) => {
+                        return (
+                            <div key={key}>
+                                <ExperienceCard jobTitle={data.jobTitle} company={data.company} duration={data.duration} picture={data.picture}/>
+                            </div>
+                        );
+                    })}
+                </div>
+                <div>
+                    <div className={"experience-title-container"}>
+                        <h1 className="experience-title">Education</h1>
+                    </div>
+                    {education.map((data, key) => {
+                        return (
+                            <div key={key}>
+                                <ExperienceCard jobTitle={data.jobTitle} company={data.company} duration={data.duration} picture={data.picture}/>
+                            </div>
+                        );
+                    })}
+
+                </div>
+
             </div>
         </div>
     )
