@@ -1,0 +1,38 @@
+.projectCardContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-right: 20px;
+  border-top: 1px solid rgba(255, 215, 0, 0.6);
+  border-left: 1px solid rgba(255, 215, 0, 0.6);
+  border-right: 1px solid rgba(255, 215, 0, 0.6);
+  border-radius: 1em;
+  width: 250px;
+  height: 250px;
+
+  color: white;
+
+  .projectImageContainer {
+    margin: 10px auto 0;
+
+    .projectImage {
+      width: 95px;
+      height: 95px;
+    }
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+    color: white;
+  }
+
+  .projectCardInformation {
+    text-align: center;
+
+  }
+
+}

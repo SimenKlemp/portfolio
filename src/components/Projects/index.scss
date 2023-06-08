@@ -1,0 +1,56 @@
+.container-projects{
+  display: block;
+  overflow-y: auto;
+
+  .site-information {
+    position: absolute;
+    color: white;
+    display: block;
+    transform: translateY(-50%);
+    max-height: 90%;
+    top: 25%;
+    left: 10%;
+
+    .project-page-title {
+      color: #fff;
+      font-size: 50px;
+      line-height: 53px;
+      margin: 0;
+      font-family: 'Coolvetica';
+      font-weight: bold;
+      letter-spacing: 4px;
+    }
+
+    .project-page-description {
+      color: #fff;
+      margin-top: 30px;
+      font-weight: 400;
+      font-size: 18px;
+      font-family: sans-serif;
+      letter-spacing: 2px;
+      animation: fadeIn 1s 1.4s backwards;
+    }
+
+
+  }
+
+  .project-container {
+    margin-top: 22%;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    max-width: 1000px;
+
+    .projectLink {
+      text-decoration: none;
+
+    }
+
+
+
+  }
+
+
+
+}

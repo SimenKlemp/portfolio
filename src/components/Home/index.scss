@@ -26,7 +26,6 @@
       margin-top: -50px;
       left: -15px;
       opacity: 0.6;
-      animation: fadeIn 1s 1.7s backwards;
     }
 
     &:after {
@@ -37,7 +36,6 @@
       position: absolute;
       margin-top: -30px;
       left: -15px;
-      animation: fadeIn 1s 1.7s backwards;
       opacity: 0.6;
     }
 
@@ -104,4 +102,112 @@
 
   }
 
+}
+
+/*Medium devices like tablets */
+
+@media screen and (max-width: 600px) {
+  .home-page {
+    display: flex;
+    flex-direction: column;
+
+    .text-zone {
+      position: absolute;
+      left: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60%;
+      max-height: 90%;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 40px;
+      line-height: 53px;
+      margin: 0;
+      font-family: 'Coolvetica';
+      font-weight: bold;
+
+
+      &:before {
+        content: '<h1>';
+        font-family: 'La Belle Aurore', cursive;
+        color: #ffd700;
+        font-size: 14px;
+        position: absolute;
+        margin-top: -50px;
+        left: -15px;
+        opacity: 0.6;
+      }
+
+      &:after {
+        content: '<h1/>';
+        font-family: 'La Belle Aurore', cursive;
+        color: #ffd700;
+        font-size: 14px;
+        position: absolute;
+        margin-top: -30px;
+        left: -15px;
+        opacity: 0.6;
+      }
+
+      img {
+        margin-left: 20px;
+        opacity: 0;
+        width: 32px;
+        height: auto;
+        animation: rotateIn 1s linear both;
+        animation-delay: 1.4s;
+      }
+    }
+
+    h2 {
+      color: #fff;
+      margin-top: 10px;
+      font-weight: 400;
+      font-size: 32px;
+      font-family: sans-serif;
+      letter-spacing: 3px;
+      animation: fadeIn 1s 1.8s backwards;
+    }
+
+    .flat-button {
+      color: #ffd700;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      font-family: sans-serif;
+      text-decoration: none;
+      padding: 10px 18px;
+      border: 1px solid #ffd700;
+      margin-top: 55px;
+      float: left;
+      animation: fadeInAnimation 1s 1.8s backwards;
+      white-space: nowrap;
+
+      &:hover {
+        background: #ffd700;
+        color: #333;
+      }
+
+      .professionTitle {
+
+
+      }
+    }
+    .picture {
+
+      position: absolute;
+      margin: auto;
+
+
+      img {
+        margin: 90px auto;
+        width: 150px;
+        height: auto;
+
+      }
+
+    }
+  }
 }
