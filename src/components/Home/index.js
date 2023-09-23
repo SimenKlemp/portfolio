@@ -2,7 +2,9 @@ import {Link} from "react-router-dom";
 import './index.scss'
 import homeLogo from '../../assets/images/work.png'
 
+
 const Home = () => {
+
     return (
         <div className="container home-page">
             <div className="text-zone">
@@ -12,7 +14,7 @@ const Home = () => {
                     <br />
                     <h2>Computer Scientist and Developer</h2>
                 </h1>
-                <Link to="/contact" className="flat-button"> CONTACT ME </Link>
+                <Link to="/about" className="flat-button"> GET TO KNOW ME BETTER </Link>
             </div>
             <div className="picture">
                 <img className="solid-logo" src={homeLogo} />

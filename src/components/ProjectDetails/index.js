@@ -1,10 +1,9 @@
-
 import './index.scss'
 import {useEffect, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import {Button} from "@mui/material";
 import {handleGet} from "../../utils/utils";
-
+import { FiChevronLeft } from "react-icons/fi";
 import gitHubLogo from '../../assets/images/githubLogo.png'
 
 const ProjectDetails = () => {
@@ -24,18 +23,24 @@ const ProjectDetails = () => {
 
     return (
         <div className="container project-details-card" >
-            <div className="backButtonContainer">
-                <Button onClick={() => navigate("/projects")}>
-                    Go Back
-                </Button>
-            </div>
+
             {project ? (
                 <div className="projectBar">
+                    <div className="backButtonContainer">
+                        <Button onClick={() => navigate("/projects")}>
+                            <FiChevronLeft
+                                color="white"
+                                size="30px"
 
+                            />
+                            <p className="paragraph"> Go back </p>
+
+                        </Button>
+                    </div>
                     <div>
                         <h1 className="projectTitle"> {project.title} </h1>
                         <div className="subtitleAndLinkContainer">
-                            <h2> {project.subtitle}</h2>
+                            <h2> {project.stack}</h2>
                             <a href={project.link} target="_blank" rel="noreferrer">
                                 <img
                                     className="githubLogo"
@@ -47,17 +52,17 @@ const ProjectDetails = () => {
                     </div>
                     <div className="projectDetailsImgContainer">
                         <img className="projectDetailsImage"
-                            src={project.imgDetail}
+                            src={project.detailedImg}
                             style={imgLoading ? { display: "none" } : { maxWidth: "100%", maxHeight: "100%" }}
                             alt={""}
                             onLoad={() => setImgLoading(false)}
                         />
                     </div>
                     <div className="projectDescriptionContainer">
-                        <h2>What´s the purpose? </h2>
-                        <h3>
+                        <h1>What´s the purpose of the app? </h1>
+                        <h2>
                             {project.description}
-                        </h3>
+                        </h2>
                     </div>
                 </div>
             ): <p> Fetching projects...</p>}

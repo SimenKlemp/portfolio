@@ -1,0 +1,214 @@
+[debug] [2023-06-16T14:35:54.681Z] ----------------------------------------------------------------------
+[debug] [2023-06-16T14:35:54.683Z] Command:       /Users/simenklemppetersen/.nvm/versions/node/v16.20.0/bin/node /Users/simenklemppetersen/.nvm/versions/node/v16.20.0/bin/firebase deploy
+[debug] [2023-06-16T14:35:54.683Z] CLI Version:   11.1.0
+[debug] [2023-06-16T14:35:54.683Z] Platform:      darwin
+[debug] [2023-06-16T14:35:54.683Z] Node Version:  v16.20.0
+[debug] [2023-06-16T14:35:54.695Z] Time:          Fri Jun 16 2023 16:35:54 GMT+0200 (Central European Summer Time)
+[debug] [2023-06-16T14:35:54.695Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-16T14:35:54.757Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-16T14:35:54.758Z] > authorizing via signed-in user (simenk2312@gmail.com)
+[debug] [2023-06-16T14:35:54.758Z] [iam] checking project portfolio-50012 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-06-16T14:35:54.763Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-50012:testIamPermissions [none]
+[debug] [2023-06-16T14:35:54.764Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-50012:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-16T14:35:55.659Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-50012:testIamPermissions 200
+[debug] [2023-06-16T14:35:55.659Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-50012:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-16T14:35:55.660Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/portfolio-50012/serviceAccounts/portfolio-50012@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-06-16T14:35:55.660Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/portfolio-50012/serviceAccounts/portfolio-50012@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-06-16T14:35:56.334Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/portfolio-50012/serviceAccounts/portfolio-50012@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-06-16T14:35:56.334Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/portfolio-50012/serviceAccounts/portfolio-50012@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-06-16T14:35:56.336Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-50012 [none]
+[debug] [2023-06-16T14:35:56.775Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-50012 200
+[debug] [2023-06-16T14:35:56.775Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-50012 {"projectId":"portfolio-50012","projectNumber":"907243775900","displayName":"Portfolio","name":"projects/portfolio-50012","resources":{"hostingSite":"portfolio-50012","storageBucket":"portfolio-50012.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_08832934-1a75-4efd-9371-c696f320cd0e"}
+[info] 
+[info] === Deploying to 'portfolio-50012'...
+[info] 
+[info] i  deploying functions, hosting 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2023-06-16T14:36:05.700Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-50012 [none]
+[debug] [2023-06-16T14:36:05.993Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-50012 200
+[debug] [2023-06-16T14:36:05.993Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-50012 {"projectId":"portfolio-50012","projectNumber":"907243775900","displayName":"Portfolio","name":"projects/portfolio-50012","resources":{"hostingSite":"portfolio-50012","storageBucket":"portfolio-50012.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_08832934-1a75-4efd-9371-c696f320cd0e"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2023-06-16T14:36:05.997Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/portfolio-50012/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-06-16T14:36:05.998Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/portfolio-50012/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-06-16T14:36:06.000Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/portfolio-50012/services/cloudbuild.googleapis.com [none]
+[debug] [2023-06-16T14:36:06.001Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/portfolio-50012/services/artifactregistry.googleapis.com [none]
+[debug] [2023-06-16T14:36:07.026Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/portfolio-50012/services/cloudbuild.googleapis.com 200
+[debug] [2023-06-16T14:36:07.026Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/portfolio-50012/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-06-16T14:36:07.027Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/portfolio-50012/services/artifactregistry.googleapis.com 200
+[debug] [2023-06-16T14:36:07.027Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/portfolio-50012/services/artifactregistry.googleapis.com [omitted]
+[debug] [2023-06-16T14:36:07.027Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/portfolio-50012/services/runtimeconfig.googleapis.com 200
+[debug] [2023-06-16T14:36:07.028Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/portfolio-50012/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-06-16T14:36:07.029Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/portfolio-50012/services/cloudfunctions.googleapis.com 200
+[debug] [2023-06-16T14:36:07.029Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/portfolio-50012/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-06-16T14:36:07.030Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-50012/adminSdkConfig [none]
+[debug] [2023-06-16T14:36:07.424Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-50012/adminSdkConfig 200
+[debug] [2023-06-16T14:36:07.424Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-50012/adminSdkConfig {"projectId":"portfolio-50012","storageBucket":"portfolio-50012.appspot.com","locationId":"europe-west"}
+[debug] [2023-06-16T14:36:07.425Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/portfolio-50012/configs [none]
+[debug] [2023-06-16T14:36:08.349Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/portfolio-50012/configs 200
+[debug] [2023-06-16T14:36:08.349Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/portfolio-50012/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2023-06-16T14:36:08.354Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-06-16T14:36:09.935Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.23.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2023-06-16T14:36:09.935Z] Building nodejs source
+[debug] [2023-06-16T14:36:09.936Z] Analyzing nodejs backend spec
+[debug] [2023-06-16T14:36:09.937Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-06-16T14:36:10.269Z] Serving at port 9005
+
+[debug] [2023-06-16T14:36:10.350Z] Got response from /__/functions.yaml {"endpoints":{"checkAdmin":{"platform":"gcfv1","labels":{},"callableTrigger":{},"entryPoint":"checkAdmin"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-06-16T14:36:10.356Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/simenklemppetersen/Downloads/Portfolio-master/functions (30.72 KB) for uploading 
+[debug] [2023-06-16T14:36:10.408Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/portfolio-50012/locations/-/functions [none]
+[debug] [2023-06-16T14:36:11.121Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/portfolio-50012/locations/-/functions 200
+[debug] [2023-06-16T14:36:11.121Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/portfolio-50012/locations/-/functions {"functions":[{"name":"projects/portfolio-50012/locations/us-central1/functions/checkAdmin","httpsTrigger":{"url":"https://us-central1-portfolio-50012.cloudfunctions.net/checkAdmin","securityLevel":"SECURE_ALWAYS"},"status":"OFFLINE","entryPoint":"checkAdmin","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"portfolio-50012@appspot.gserviceaccount.com","updateTime":"2023-06-16T14:16:06.022Z","versionId":"1","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"4692625f58a63b330f3d1a34d97abaaa07e2b1fc"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-476394956637.us-central1.cloudfunctions.appspot.com/4014840f-14b9-4351-a386-2c98f56efe07.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"portfolio-50012\",\"storageBucket\":\"portfolio-50012.appspot.com\",\"locationId\":\"europe-west\"}","GCLOUD_PROJECT":"portfolio-50012","EVENTARC_CLOUD_EVENT_SOURCE":"projects/portfolio-50012/locations/us-central1/functions/checkAdmin"},"runtime":"nodejs18","ingressSettings":"ALLOW_ALL","buildId":"ac90283c-682c-410f-a916-d64eb1a55e45","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/907243775900/locations/us-central1/builds/ac90283c-682c-410f-a916-d64eb1a55e45","dockerRegistry":"ARTIFACT_REGISTRY"}]}
+[debug] [2023-06-16T14:36:11.121Z] GCFv1 function has a deprecated runtime: {
+  "name": "projects/portfolio-50012/locations/us-central1/functions/checkAdmin",
+  "httpsTrigger": {
+    "url": "https://us-central1-portfolio-50012.cloudfunctions.net/checkAdmin",
+    "securityLevel": "SECURE_ALWAYS"
+  },
+  "status": "OFFLINE",
+  "entryPoint": "checkAdmin",
+  "timeout": "60s",
+  "availableMemoryMb": 256,
+  "serviceAccountEmail": "portfolio-50012@appspot.gserviceaccount.com",
+  "updateTime": "2023-06-16T14:16:06.022Z",
+  "versionId": "1",
+  "labels": {
+    "deployment-tool": "cli-firebase",
+    "deployment-callable": "true",
+    "firebase-functions-hash": "4692625f58a63b330f3d1a34d97abaaa07e2b1fc"
+  },
+  "sourceUploadUrl": "https://storage.googleapis.com/uploads-476394956637.us-central1.cloudfunctions.appspot.com/4014840f-14b9-4351-a386-2c98f56efe07.zip",
+  "environmentVariables": {
+    "FIREBASE_CONFIG": "{\"projectId\":\"portfolio-50012\",\"storageBucket\":\"portfolio-50012.appspot.com\",\"locationId\":\"europe-west\"}",
+    "GCLOUD_PROJECT": "portfolio-50012",
+    "EVENTARC_CLOUD_EVENT_SOURCE": "projects/portfolio-50012/locations/us-central1/functions/checkAdmin"
+  },
+  "runtime": "nodejs18",
+  "ingressSettings": "ALLOW_ALL",
+  "buildId": "ac90283c-682c-410f-a916-d64eb1a55e45",
+  "buildEnvironmentVariables": {
+    "GOOGLE_NODE_RUN_SCRIPTS": ""
+  },
+  "buildName": "projects/907243775900/locations/us-central1/builds/ac90283c-682c-410f-a916-d64eb1a55e45",
+  "dockerRegistry": "ARTIFACT_REGISTRY"
+}
+[debug] [2023-06-16T14:36:11.122Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2alpha/projects/portfolio-50012/locations/-/functions [none]
+[debug] [2023-06-16T14:36:12.340Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2alpha/projects/portfolio-50012/locations/-/functions 200
+[debug] [2023-06-16T14:36:12.341Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2alpha/projects/portfolio-50012/locations/-/functions {"functions":[{"name":"projects/portfolio-50012/locations/us-central1/functions/isAdmin","buildConfig":{"build":"projects/907243775900/locations/us-central1/builds/4a929b60-47fa-4882-8b0e-c1db5b533326","runtime":"nodejs18","entryPoint":"isAdmin","source":{"storageSource":{"bucket":"gcf-v2-sources-907243775900-us-central1","object":"isAdmin/function-source.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-907243775900-us-central1","object":"isAdmin/function-source.zip","generation":"1686861705939561"}}},"state":"UNKNOWN","updateTime":"2023-06-16T12:17:28.025893015Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"84ba8914da4530f28d291021f41aa47d2639cce9"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/portfolio-50012/locations/us-central1/services/isadmin for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2","url":"https://us-central1-portfolio-50012.cloudfunctions.net/isAdmin"},{"name":"projects/portfolio-50012/locations/us-central1/functions/checkAdmin","buildConfig":{"build":"projects/907243775900/locations/us-central1/builds/ac90283c-682c-410f-a916-d64eb1a55e45","runtime":"nodejs18","entryPoint":"checkAdmin","source":{"storageSource":{"bucket":"uploads-476394956637.us-central1.cloudfunctions.appspot.com","object":"4014840f-14b9-4351-a386-2c98f56efe07.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRegistry":"ARTIFACT_REGISTRY"},"serviceConfig":{"timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"portfolio-50012\",\"storageBucket\":\"portfolio-50012.appspot.com\",\"locationId\":\"europe-west\"}","GCLOUD_PROJECT":"portfolio-50012","EVENTARC_CLOUD_EVENT_SOURCE":"projects/portfolio-50012/locations/us-central1/functions/checkAdmin"},"ingressSettings":"ALLOW_ALL","uri":"https://us-central1-portfolio-50012.cloudfunctions.net/checkAdmin","serviceAccountEmail":"portfolio-50012@appspot.gserviceaccount.com","availableMemory":"256M","revision":"1","maxInstanceRequestConcurrency":1,"securityLevel":"SECURE_ALWAYS"},"state":"FAILED","updateTime":"2023-06-16T14:16:06.022Z","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"4692625f58a63b330f3d1a34d97abaaa07e2b1fc"},"environment":"GEN_1","url":"https://us-central1-portfolio-50012.cloudfunctions.net/checkAdmin"}]}
+[debug] [2023-06-16T14:36:12.458Z] TypeError: Cannot read properties of undefined (reading 'service')
+    at /Users/simenklemppetersen/.nvm/versions/node/v16.20.0/lib/node_modules/firebase-tools/lib/deploy/functions/backend.js:197:113
+    at Array.map (<anonymous>)
+    at loadExistingBackend (/Users/simenklemppetersen/.nvm/versions/node/v16.20.0/lib/node_modules/firebase-tools/lib/deploy/functions/backend.js:197:69)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.existingBackend (/Users/simenklemppetersen/.nvm/versions/node/v16.20.0/lib/node_modules/firebase-tools/lib/deploy/functions/backend.js:173:9)
+    at async prepare (/Users/simenklemppetersen/.nvm/versions/node/v16.20.0/lib/node_modules/firebase-tools/lib/deploy/functions/prepare.js:119:115)
+    at async chain (/Users/simenklemppetersen/.nvm/versions/node/v16.20.0/lib/node_modules/firebase-tools/lib/deploy/index.js:33:9)
+    at async deploy (/Users/simenklemppetersen/.nvm/versions/node/v16.20.0/lib/node_modules/firebase-tools/lib/deploy/index.js:68:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-08-16T12:53:00.849Z] ----------------------------------------------------------------------
+[debug] [2023-08-16T12:53:00.851Z] Command:       /Users/simenklemppetersen/.nvm/versions/node/v18.16.0/bin/node /Users/simenklemppetersen/.nvm/versions/node/v18.16.0/bin/firebase functions:shell
+[debug] [2023-08-16T12:53:00.851Z] CLI Version:   11.1.0
+[debug] [2023-08-16T12:53:00.851Z] Platform:      darwin
+[debug] [2023-08-16T12:53:00.852Z] Node Version:  v18.16.0
+[debug] [2023-08-16T12:53:00.861Z] Time:          Wed Aug 16 2023 14:53:00 GMT+0200 (Central European Summer Time)
+[debug] [2023-08-16T12:53:00.862Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-16T12:53:00.864Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-08-16T12:53:00.965Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-16T12:53:00.965Z] > authorizing via signed-in user (simenk2312@gmail.com)
+[debug] [2023-08-16T12:53:00.965Z] [iam] checking project portfolio-50012 for permissions ["firebase.projects.get"]
+[debug] [2023-08-16T12:53:00.966Z] > refreshing access token with scopes: []
+[debug] [2023-08-16T12:53:00.967Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-08-16T12:53:00.967Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-16T12:53:01.207Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-08-16T12:53:01.208Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-16T12:53:01.260Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-50012:testIamPermissions [none]
+[debug] [2023-08-16T12:53:01.260Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-50012:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-08-16T12:53:01.293Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-08-16T12:53:01.293Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-08-16T12:53:02.174Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-50012:testIamPermissions 200
+[debug] [2023-08-16T12:53:02.175Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-50012:testIamPermissions {"permissions":["firebase.projects.get"]}
+[warn] ⚠  Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"18\". Using node@18 from host."}}
+[debug] [2023-08-16T12:53:02.197Z] defaultcredentials: writing to file /Users/simenklemppetersen/.config/firebase/simenk2312_gmail_com_application_default_credentials.json
+[debug] [2023-08-16T12:53:02.200Z] DEBUG: Setting GAC to /Users/simenklemppetersen/.config/firebase/simenk2312_gmail_com_application_default_credentials.json
+[debug] [2023-08-16T12:53:02.200Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-50012/adminSdkConfig [none]
+[debug] [2023-08-16T12:53:02.789Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-50012/adminSdkConfig 200
+[debug] [2023-08-16T12:53:02.789Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-50012/adminSdkConfig {"projectId":"portfolio-50012","storageBucket":"portfolio-50012.appspot.com","locationId":"europe-west"}
+[debug] [2023-08-16T12:53:02.825Z] [functions] Watching "/Users/simenklemppetersen/Downloads/Portfolio-master/functions" for Cloud Functions...
+[debug] [2023-08-16T12:53:02.832Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-08-16T12:53:04.138Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.23.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2023-08-16T12:53:04.138Z] Building nodejs source
+[debug] [2023-08-16T12:53:04.138Z] Analyzing nodejs backend spec
+[debug] [2023-08-16T12:53:04.140Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-16T12:53:04.408Z] Serving at port 9005
+
+[debug] [2023-08-16T12:53:04.491Z] Got response from /__/functions.yaml {"endpoints":{"checkAdmin":{"platform":"gcfv1","labels":{},"callableTrigger":{},"entryPoint":"checkAdmin"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-08-16T12:53:04.498Z] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-16T12:53:04.512Z] [functions[us-central1-checkAdmin]] http function initialized (http://localhost:5001/portfolio-50012/us-central1/checkAdmin).
+[info] i  functions: Loaded functions: checkAdmin 
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage 

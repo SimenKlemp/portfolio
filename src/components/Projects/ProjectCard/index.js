@@ -1,17 +1,40 @@
 
 import './index.scss'
-import {useState} from "react";
+import {useContext, useEffect, useState} from "react";
+import addIcon from '../../../assets/images/addIcon.png'
+import {userContext} from "../../../Contexts";
 
 const ProjectCard = (props) => {
 
+    const { title, previewImg, detailedImg, stack, isNewProject} = props
 
     const [imgLoading, setImgLoading] = useState(true)
 
+    //const user = useContext(userContext)
+
+
+    if(isNewProject) {
+        return (
+            <div className="projectCardContainer">
+                <div className="projectCardInformation">
+                    <h1> Add Project</h1>
+                </div>
+                <div className="projectImageContainer">
+                    <img
+                        className="projectImage"
+                        src={addIcon}
+                    />
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div className="projectCardContainer" >
+
             <div className="projectImageContainer">
                 <img className="projectImage"
-                     src={props.image}
+                     src={previewImg}
                      style={imgLoading ? { display: "none" } : { maxWidth: "100%", maxHeight: "100%" }}
                      alt={""}
                      onLoad={() => setImgLoading(false)}
@@ -19,10 +42,10 @@ const ProjectCard = (props) => {
             </div>
             <div className="projectCardInformation">
                 <h1>
-                    {props.title}
+                    {title}
                 </h1>
                 <h3>
-                    {props.subtitle}
+                    {stack}
                 </h3>
             </div>
         </div>

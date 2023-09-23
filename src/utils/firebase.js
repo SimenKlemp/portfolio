@@ -1,5 +1,9 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getAuth, GoogleAuthProvider, signInWithRedirect, browserPopupRedirectResolver, signOut } from 'firebase/auth'
+import { getFunctions } from "firebase/functions";
+import { getStorage } from "firebase/storage";
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyD_fG22cdTtzNgn8tkBvJ6TiZiDz-l1ifU",
@@ -11,4 +15,17 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-export default getFirestore()
+
+export const auth = getAuth(app)
+
+const provider = new GoogleAuthProvider()
+
+export const signInWithGoogle = () => signInWithRedirect(auth, provider, browserPopupRedirectResolver);
+export const signOutFromApp = () => signOut(auth);
+
+export const storage = getStorage(app);
+
+export const functions = getFunctions(app);
+
+export default getFirestore(app)
+

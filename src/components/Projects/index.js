@@ -2,13 +2,20 @@
 import './index.scss'
 import ProjectCard from "./ProjectCard";
 import {Link} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {getDocs, collection} from "firebase/firestore";
 import db from "../../utils/firebase"
+import {userContext} from '../../Contexts'
 
 const Projects = () => {
 
     const [projects, setProjects] = useState([]);
+
+    //const { isAdmin } = useContext(userContext);
+
+
+
+    console.log(projects)
 
     useEffect(() => {
         getDocs(collection(db, "projects"))
@@ -18,8 +25,9 @@ const Projects = () => {
             .catch((err) => {
                 console.log(err.message);
             });
-
     }, []);
+
+
 
 
     return (
@@ -33,14 +41,17 @@ const Projects = () => {
                     </h2>
                 </div>
                 <div className="project-container">
-                    {projects.map((project, index) => (
-
+                    <div>
+                        <Link className="projectLink" to={"/admin/addProject/"} >
+                            <ProjectCard isNewProject={true}/>
+                        </Link>
+                    </div>
+                    {projects.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).map((project, index) => (
                         <Link className="projectLink" to={"/projectDetails/" + project.id} key={project.id}>
-                            <ProjectCard subtitle={project.subtitle} title={project.title} image={project.imageUrl} />
+                            <ProjectCard stack={project.stack} title={project.title} previewImg={project.previewImg} detailedImg={project.detailedImg} />
                         </Link>
                     ))}
                 </div>
-
             </div>
     );
 }

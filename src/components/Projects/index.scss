@@ -1,5 +1,5 @@
 .container-projects{
-  display: block;
+  display: flex;
   overflow-y: auto;
 
   .site-information {
@@ -31,16 +31,15 @@
       animation: fadeIn 1s 1.4s backwards;
     }
 
-
   }
 
   .project-container {
-    margin-top: 22%;
+    margin-top: 18%;
     margin-left: 10%;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    max-width: 1000px;
+    max-width: 1100px;
 
     .projectLink {
       text-decoration: none;
